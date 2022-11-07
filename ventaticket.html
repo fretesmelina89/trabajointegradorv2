@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/codoacodo.png"> Conf Bs As
+                    </a>
+
+                    <div class="justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Los oradores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">El lugar y la fecha</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Conviertete en orador</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="botonverde">Comprar Tickets</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <br>
+    </header>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center" style=" margin: 0% 23% 0% 23%;">
+        <div class="col">
+            <div class="card h-100 border border-primary rounded-0" style="width: 14rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Estudiante</h5>
+                    <p class="card-text">Tienen un descuento</p>
+                    <h5 class="card-title">80%</h5>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-muted">* presetar documentación</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border border-warning rounded-0" style="width: 14rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Trainee</h5>
+                    <p class="card-text">Tienen un descuento</p>
+                    <h5 class="card-title">50%</h5>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-muted">* presetar documentación</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border border-info rounded-0" style="width: 14rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Junior</h5>
+                    <p class="card-text">Tienen un descuento</p>
+                    <h5 class="card-title">15%</h5>
+                    <br>
+                    <h6 class="card-subtitle mb-2 text-muted">* presetar documentación</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div style="margin: 0% 23% 0% 23%;">
+        <div id="encabezadoform">
+            <p>VENTA</p>
+            <h1>VALOR DE TICKET $200</h1>
+        </div>
+
+        <form class="row g-2">
+            <div class="col">
+                <label for="nombre" class="visually-hidden">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+
+            </div>
+            <div class="col">
+                <label for="apellido" class="visually-hidden">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+
+            <div class="mb-3">
+                <!--<label for="exampleFormControlInput1 " class="form-label "></label>-->
+                <input type="email" class="form-control" id="mail" placeholder="Correo">
+            </div>
+
+            <div class="col">
+                <label for="cantidad" class="form-label ">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+            </div>
+            <div class="col">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select class="form-select" aria-label="Default select example" id="categoriaSelect">
+                <option selected value="0">Sin categoria</option>
+                <option value="1">Estudiante</option>
+                <option value="2">Trainee</option>
+                <option value="3">Junior</option>
+              </select>
+                <br>
+            </div>
+
+            <div class="alert alert-primary" role="alert" style="height: auto;">
+                <p id="totalPago">Total a pagar: $</p>
+            </div>
+            <br>
+
+            <div class="row gx-2">
+                <div class="d-grid col-md mx-auto">
+                    <button class="btn btn-success" type="reset" id="btnBorrar">Borrar</button>
+                </div>
+                <div class="d-grid col-md mx-auto">
+                    <button class="btn btn-success" type="button" value="btnResumen" id="btnResumen" onclick="total_a_pagar();">Resumen</button>
+                </div>
+            </div>
+            <br>
+        </form>
+        <br>
+    </div>
+
+    <footer>
+        <nav class="navbar-dark navbar-expand-lg bg-dark" style=" background: linear-gradient(20deg,#1d3e4f,#1e4c66);">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Preguntas frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" style="width: 130px">Contáctenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Prensa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Conferencias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Terminos y condiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Privacidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" style="width: 130px">Estudiantes</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+
+
+
+
+    <script src="js/ventaticket.js"></script>
+
+</body>
+
+</html>

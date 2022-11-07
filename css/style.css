@@ -1,0 +1,56 @@
+.navbar-brand img {
+    width: 100px;
+}
+
+#botonverde {
+    color: #25a342;
+}
+
+.carousel-item {
+    opacity: .8;
+}
+
+#container {
+    margin: auto;
+}
+
+#honolulu {
+    background-color: #353a40;
+    color: white;
+    width: 49%;
+    margin-left: 1px;
+    padding: 10px;
+}
+
+#botonEnviar {
+    background-color: #96c93e;
+    color: white;
+}
+
+#r {
+    color: gray;
+}
+
+u {
+    border-bottom: 2px dotted #000;
+    text-decoration: none;
+}
+
+#encabezadoform {
+    text-align: center;
+}
+
+#btnBorrar {
+    background-color: #97c93e;
+    border-color: #97c93e;
+}
+
+#btnResumen {
+    background-color: #97c93e;
+    border-color: #97c93e;
+}
+
+.navbar-expand-lg {
+    padding: 15px 15px 15px 15px;
+    text-align: center;
+}
